@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\.android\build-cache\ce4c93b906c926b5f7970eb8ba219bfa09864cd9\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_12eecfb1de455ae0f30159b21f5bfeb49c328f64\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\.android\build-cache\b91e4f185b39d1526aa7eeb8a11c42894d5c58ee\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e3ee454599e52b56307eda1fbab09a2a80114614\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\.android\build-cache\9ceb7019105a14ab1b7411990686b0ccb383a7ff\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f674c0e13158c4385d712934254cb81c426d72df\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\.android\build-cache\0ce41bc6d3303f138ccfda0e4f079d282bc72507\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8cc5018c2e0082af67b9b692bfadd5430df1c582\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\.android\build-cache\31c7d0170f233a60c1b7fe56b3b30dd81b667985\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_65bfa8559ba29481c6210eb6c95856daf3bcaeb2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\.android\build-cache\74e0e98d6a254c3073941dd050a8140d9330c037\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e176fd06c2ad5b50a2f5cb4de6000a83a7cb48f5">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_105a1cb574cbace38cc9bdc2b0179a63462d1b01\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\.android\build-cache\c0fef86feae3998e3b45081f96c7a8fd73cfa512\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_54556475851a844a03b3ff49c893d4f03e4197fe\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\.android\build-cache\a5e6fc178a61fde970fcb829f5bf54c8ded6a270\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="eb305d2ec1f85a4122c5e9d0412c87e20dac20f8">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2fdffa1798885cdeb884aba6fc0a0fd43addccdf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\.android\build-cache\e11baf39b8f4c2c667d3683b6a6dcc0a72caf2c2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0e31a4d66c88937072416053f1348f739435a1ff\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\.android\build-cache\725ab4c12a1711bab615cb300437230983e9a6d9\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7390f253d67992f5e9199179eb9c70873649bd80\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-26.0.0-alpha1_4dad57e2e4b644bd7d045f26cb059c46a1d9e30f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\.android\build-cache\56c2bb8afc2f2220a2416fc6972a0b07e9bc5d45\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_99f8ef24edd949af4e6dd68ba2eb485f7ad09031\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\.android\build-cache\6bca8bc96c8114b2e18c1a237ce0c383091d75ec\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c85acaf3990258a7317d8f5123da55439d7af200\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9460a2415693bbb64f8f1eed992736e5f453a5b2">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f10d0a2f89ea313fbb90cc3cd4767f9d5a4c3e4d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\.android\build-cache\929c18f94e1279a1b49a8c7f4ff8943d1b5e66aa\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5f8a29e650d53a527a13a0634051aabadcf20027\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_97b160970743f7d0b620d88b9e8a75ec67737e51\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sean\.android\build-cache\4f045f150e2c8ba5db24544ce4b751dc4eb0f6ec\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="C:\Users\Sean\AndroidStudioProjects\TipCalculator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_26857d6a5ac1adddd4d536a59709193198b03ed8\classes.dex" />
+    </item>
+
+</items>
