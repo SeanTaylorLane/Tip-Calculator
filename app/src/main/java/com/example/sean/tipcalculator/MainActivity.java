@@ -1,13 +1,20 @@
 package com.example.sean.tipcalculator;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.jakewharton.rxbinding2.view.RxView;
 import com.jakewharton.rxbinding2.widget.RxTextView;
+
+import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,22 +25,27 @@ public class MainActivity extends AppCompatActivity {
     private boolean peopleIsValid = false;
     private EditText edit_bill, edit_percentage, edit_people;
     private TextView compute_person, compute_bill, compute_tip;
+    private NumberFormat myCurrencyFormatter = NumberFormat.getCurrencyInstance();
+    private double personOutput, tipOutput, billOutput, percentageInput;
+    private String shareText;
 
     private void printResults() {
         if (billIsValid && percentageIsValid && peopleIsValid) {
+            // Grab the user's input as double values
             double billInput = Double.parseDouble(edit_bill.getText().toString());
-            double percentageInput = Double.parseDouble(edit_percentage.getText().toString());
+            percentageInput = Double.parseDouble(edit_percentage.getText().toString());
             double peopleInput = Double.parseDouble(edit_people.getText().toString());
-            double personOutput, tipOutput, billOutput;
 
-            tipOutput = billInput * (percentageInput/100);
-            billOutput = tipOutput + billInput;
-            personOutput = billOutput/peopleInput;
+            // Calculate the output and round it to two decimal places
+            tipOutput = (double) Math.round((billInput * (percentageInput/100))*100)/100;
+            billOutput = (double) Math.round((tipOutput + billInput)*100)/100;
+            personOutput = (double) Math.round((billOutput/peopleInput)*100)/100;
 
-            Log.e(TAG, "yoooooooo");
-            compute_person.setText("$" + personOutput);
-            compute_bill.setText("$" + billOutput);
-            compute_tip.setText("$" + tipOutput);
+            // Create an instance of the NumberFormat class to ensure trailing zeros and national currency signs!
+            compute_person.setText(myCurrencyFormatter.format(personOutput));
+            compute_bill.setText(myCurrencyFormatter.format(billOutput));
+            compute_tip.setText(myCurrencyFormatter.format(tipOutput));
+
 
         } else {
             compute_person.setText("");
@@ -96,7 +108,26 @@ public class MainActivity extends AppCompatActivity {
             }
             printResults();
 
+
         });
+
+        FloatingActionButton fab_share = (FloatingActionButton) findViewById(R.id.fab_share);
+        Toast shareErrorToast = Toast.makeText(getApplicationContext(), "Compute your tip first!", Toast.LENGTH_SHORT);
+
+        RxView.clicks(fab_share).subscribe(thisisavoidargument -> {
+            if (billIsValid && percentageIsValid && peopleIsValid){
+                shareText = "The bill from our meal:\n\n" + "Total Bill:   " + myCurrencyFormatter.format(billOutput) + "\n" + "Tip Percentage:   " + percentageInput + "%\n" + "You pay:   " + myCurrencyFormatter.format(personOutput) + "\nCumulative tip:   " + myCurrencyFormatter.format(tipOutput);
+                Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("text/plain");
+                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "The bill from our meal\n");
+                shareIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+                startActivity(Intent.createChooser(shareIntent, "Share bill using"));
+            } else {
+                shareErrorToast.show();
+            }
+        });
+
+
     }
 
 
