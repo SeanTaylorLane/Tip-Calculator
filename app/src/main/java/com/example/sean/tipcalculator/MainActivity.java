@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView compute_person, compute_bill, compute_tip;
     private NumberFormat myCurrencyFormatter = NumberFormat.getCurrencyInstance();
     private double personOutput, tipOutput, billOutput, percentageInput;
-    private String shareText;
+    private String shareText, formattedPercentage;
 
     private void printResults() {
         if (billIsValid && percentageIsValid && peopleIsValid) {
@@ -116,7 +116,12 @@ public class MainActivity extends AppCompatActivity {
 
         RxView.clicks(fab_share).subscribe(thisisavoidargument -> {
             if (billIsValid && percentageIsValid && peopleIsValid){
-                shareText = "The bill from our meal:\n\n" + "Total Bill:   " + myCurrencyFormatter.format(billOutput) + "\n" + "Tip Percentage:   " + percentageInput + "%\n" + "You pay:   " + myCurrencyFormatter.format(personOutput) + "\nCumulative tip:   " + myCurrencyFormatter.format(tipOutput);
+                if (Double.toString(percentageInput).charAt(Double.toString(percentageInput).length()-1) == '0') {
+                    formattedPercentage = Integer.toString((int)percentageInput);
+                } else {
+                    formattedPercentage = Double.toString(percentageInput);
+                }
+                shareText = "The bill from our meal:\n\n" + "Total Bill:   " + myCurrencyFormatter.format(billOutput) + "\n" + "Tip Percentage:   " + formattedPercentage + "%\n" + "You pay:   " + myCurrencyFormatter.format(personOutput) + "\nCumulative tip:   " + myCurrencyFormatter.format(tipOutput);
                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.setType("text/plain");
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT, "The bill from our meal\n");
