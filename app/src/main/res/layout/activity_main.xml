@@ -121,11 +121,10 @@
                 android:id="@+id/compute_bill"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
                 android:text="TextView"
                 android:textSize="24sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/output_bill"
-                app:layout_constraintEnd_toEndOf="@+id/compute_person" />
+                app:layout_constraintStart_toStartOf="@+id/compute_person" />
 
             <TextView
                 android:id="@+id/output_tip"
@@ -141,12 +140,10 @@
                 android:id="@+id/compute_tip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="0dp"
                 android:text="TextView"
                 android:textSize="24sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/output_tip"
-                app:layout_constraintEnd_toEndOf="@+id/compute_bill"
-                app:layout_constraintRight_toRightOf="parent" />
+                app:layout_constraintStart_toStartOf="@+id/compute_bill" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fab_share"
@@ -155,7 +152,7 @@
                 android:layout_marginBottom="24dp"
                 android:layout_marginEnd="24dp"
                 android:clickable="true"
-                android:visibility="gone"
+                android:visibility="invisible"
                 app:backgroundTint="@color/colorAccent"
                 app:fabSize="normal"
                 app:layout_constraintBottom_toBottomOf="parent"

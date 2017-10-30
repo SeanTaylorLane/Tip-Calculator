@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
             output_person.setText("");
             output_bill.setText("");
             output_tip.setText("");
-            fab_share.setVisibility(View.GONE);
+            fab_share.setVisibility(View.INVISIBLE);
         }
 
     }
