@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -24,13 +25,20 @@ public class MainActivity extends AppCompatActivity {
     private boolean percentageIsValid = false;
     private boolean peopleIsValid = false;
     private EditText edit_bill, edit_percentage, edit_people;
-    private TextView compute_person, compute_bill, compute_tip;
+    private TextView output_person, output_bill, output_tip, compute_person, compute_bill, compute_tip;
     private NumberFormat myCurrencyFormatter = NumberFormat.getCurrencyInstance();
     private double personOutput, tipOutput, billOutput, percentageInput;
+    private FloatingActionButton fab_share;
     private String shareText, formattedPercentage;
 
     private void printResults() {
         if (billIsValid && percentageIsValid && peopleIsValid) {
+            output_person.setText("Cost per Person:");
+            output_bill.setText("Total Bill Amount:");
+            output_tip.setText("Total Tip Amount:");
+            fab_share.setVisibility(View.VISIBLE);
+
+
             // Grab the user's input as double values
             double billInput = Double.parseDouble(edit_bill.getText().toString());
             percentageInput = Double.parseDouble(edit_percentage.getText().toString());
@@ -51,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
             compute_person.setText("");
             compute_bill.setText("");
             compute_tip.setText("");
+            output_person.setText("");
+            output_bill.setText("");
+            output_tip.setText("");
+            fab_share.setVisibility(View.GONE);
         }
 
     }
@@ -68,9 +80,15 @@ public class MainActivity extends AppCompatActivity {
         edit_people = (EditText) findViewById(R.id.edit_people);
 
         // Get all the computed TextView objects
+        output_person = (TextView) findViewById(R.id.output_person);
+        output_bill = (TextView) findViewById(R.id.output_bill);
+        output_tip = (TextView) findViewById(R.id.output_tip);
         compute_person = (TextView) findViewById(R.id.compute_person);
         compute_bill = (TextView) findViewById(R.id.compute_bill);
         compute_tip = (TextView) findViewById(R.id.compute_tip);
+
+        // Get the share button
+        fab_share = (FloatingActionButton) findViewById(R.id.fab_share);
 
 
         // Add create observables that emit data when the EditText objects are changed
@@ -101,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         RxTextView.textChanges(edit_people).subscribe(cs -> {
 
             // Is the input valid?
-            if (!cs.toString().equals("")) {
+            if (!cs.toString().equals("") && (Double.parseDouble(cs.toString())!=0) ) {
                 peopleIsValid = true;
             } else {
                 peopleIsValid = false;
@@ -110,12 +128,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
-
-        FloatingActionButton fab_share = (FloatingActionButton) findViewById(R.id.fab_share);
-        Toast shareErrorToast = Toast.makeText(getApplicationContext(), "Compute your tip first!", Toast.LENGTH_SHORT);
+        // Make a toast
 
         RxView.clicks(fab_share).subscribe(thisisavoidargument -> {
-            if (billIsValid && percentageIsValid && peopleIsValid){
                 if (Double.toString(percentageInput).charAt(Double.toString(percentageInput).length()-1) == '0') {
                     formattedPercentage = Integer.toString((int)percentageInput);
                 } else {
@@ -127,9 +142,6 @@ public class MainActivity extends AppCompatActivity {
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT, "The bill from our meal\n");
                 shareIntent.putExtra(Intent.EXTRA_TEXT, shareText);
                 startActivity(Intent.createChooser(shareIntent, "Share bill using"));
-            } else {
-                shareErrorToast.show();
-            }
         });
 
 
